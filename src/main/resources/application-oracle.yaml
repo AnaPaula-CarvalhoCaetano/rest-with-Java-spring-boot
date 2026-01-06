@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:oracle:thin:@localhost:1521/XEPDB1}
+    username: ${SPRING_DATASOURCE_USERNAME:rest_with_spring_boot}
+    password: ${SPRING_DATASOURCE_PASSWORD:rest123}
+    driver-class-name: oracle.jdbc.OracleDriver
+
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+      open-in-view: false
+
+logging:
+  level:
+    br.com.ana: DEBUG
+
+springdoc:
+  paths-to-match: /api/**/**
+  swagger-ui:
+    use-root-path: true
