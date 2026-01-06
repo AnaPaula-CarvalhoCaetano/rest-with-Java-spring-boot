@@ -5,11 +5,11 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD:rest123}
     driver-class-name: oracle.jdbc.OracleDriver
 
-    jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      open-in-view: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
 
 logging:
   level:
