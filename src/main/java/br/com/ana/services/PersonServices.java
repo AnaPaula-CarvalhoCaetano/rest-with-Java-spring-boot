@@ -21,7 +21,6 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class PersonServices {
 
-    private final AtomicLong counter = new AtomicLong();
     private Logger logger = LoggerFactory.getLogger(PersonServices.class.getName());
 
 
