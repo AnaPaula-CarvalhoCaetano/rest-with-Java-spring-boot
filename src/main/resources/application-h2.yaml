@@ -1,6 +1,18 @@
 spring:
+  profiles: h2
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+springdoc:
+  paths-to-match: /api/**/**
+  swagger-ui:
+    use-root-path: true

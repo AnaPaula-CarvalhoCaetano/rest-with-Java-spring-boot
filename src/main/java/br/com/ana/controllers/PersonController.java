@@ -60,7 +60,9 @@ public class PersonController implements PersonControllerDocs {
         Pageable pageable = PageRequest.of(page, size);
         return ResponseEntity.ok(service.findAll(pageable));
     }
-            // Cria usuário   localhost:8080/PersonDTO
+
+
+    // Cria usuário   localhost:8080/PersonDTO
 
     @PostMapping(
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, "application/x-yaml"
