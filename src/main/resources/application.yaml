@@ -1,3 +1,30 @@
 spring:
   profiles:
     active: oracle
+
+  zipkin:
+    base-url: http://localhost:9411
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0   # local → 100% das requisições
+
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health,info,prometheus
+
+  endpoint:
+    health:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+
+  logstash:
+    enabled: false
+    host: localhost
+    port: 5044
