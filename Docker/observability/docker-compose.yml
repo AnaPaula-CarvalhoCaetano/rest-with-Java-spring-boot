@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   elasticsearch:
@@ -45,6 +46,8 @@ services:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    networks:
+      - observability
 
   grafana:
     image: grafana/grafana:10.2.3
@@ -68,7 +71,6 @@ services:
       - "9411:9411"
     networks:
       - observability
-
 
 volumes:
   elasticsearch_data:

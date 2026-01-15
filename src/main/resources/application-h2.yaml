@@ -1,16 +1,26 @@
 spring:
-  profiles: h2
+  config:
+    activate:
+      on-profile: h2
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password:
-
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus
+  endpoint:
+    health:
+      enabled: true
 
 springdoc:
   paths-to-match: /api/**/**

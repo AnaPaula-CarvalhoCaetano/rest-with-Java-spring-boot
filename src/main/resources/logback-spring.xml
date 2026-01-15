@@ -12,7 +12,7 @@
 
     <!-- Logstash TCP Appender -->
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>localhost:5000</destination>
+        <destination>logstash:5000</destination>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
             <customFields>{"application":"${APP_NAME}","environment":"local"}</customFields>
         </encoder>
