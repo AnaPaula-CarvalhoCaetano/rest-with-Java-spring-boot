@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "PERSON")  // maiúscula, igual no Oracle
+@Table(name = "PERSON")  
 @Getter
 @Setter
 @NoArgsConstructor
